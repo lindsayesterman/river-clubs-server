@@ -7,6 +7,7 @@ CREATE TYPE weekdays AS ENUM (
 );
 ALTER TABLE clubs
 ADD COLUMN day_of_week weekdays;
+
 CREATE TYPE daytimes AS ENUM (
   '11',
   '12',

@@ -5,7 +5,6 @@ const cors = require('cors')
 const helmet = require('helmet')
 const { NODE_ENV } = require('./config')
 const clubsRouter = require("./clubs/clubs-router")
-const { getByName } = require('./clubs/clubs-service')
 const app = express()
 
 const morganOption = (NODE_ENV === 'production')
