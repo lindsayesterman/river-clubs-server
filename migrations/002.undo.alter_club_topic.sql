@@ -1,0 +1,3 @@
+ALTER TABLE clubs DROP COLUMN IF EXISTS topic;
+
+DROP TYPE IF EXISTS club_topic;

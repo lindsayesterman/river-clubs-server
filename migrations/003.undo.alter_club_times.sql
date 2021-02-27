@@ -1,0 +1,5 @@
+ALTER TABLE clubs DROP COLUMN IF EXISTS day_of_week;
+ALTER TABLE clubs DROP COLUMN IF EXISTS time_of_day;
+
+DROP TYPE IF EXISTS weekdays;
+DROP TYPE IF EXISTS daytimes;
