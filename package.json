@@ -28,10 +28,8 @@
     "nodemon": "^2.0.4",
     "pg": "^8.3.3",
     "postgrator": "^4.1.1",
+    "postgrator-cli": "^3.3.0",
     "supertest": "^5.0.0",
     "xss": "^1.0.8"
-  },
-  "devDependencies": {
-    "postgrator-cli": "^3.2.0"
   }
 }
