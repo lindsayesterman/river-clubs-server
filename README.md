@@ -1,6 +1,6 @@
 # River Clubs Server
 
-River Clubs is a directory of all Spanish Rivers' Clubs' information. Club leadership can post meeting times, meeting places, club members, a club description, etc. on the page.
+River Clubs is a directory of all Spanish River's Clubs' information. Club leadership can post meeting times, meeting places, club members, a club description, etc. on the page.
 
 These docs describe how to use the [River Clubs](https://river-clubs.vercel.app) API. 
 
