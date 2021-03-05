@@ -1,15 +1,38 @@
-# River Clubs
+# River Clubs Server
 
-**The problem**
+River Clubs is a directory of all Spanish Rivers' Clubs' information. Club leadership can post meeting times, meeting places, club members, a club description, etc. on the page.
 
-Eliona: "Sally, I've looked everywhere but I can't find information on what time our Girls Who Code club meeting is."
-Sally: "Oh yeah, you have to watch the announcements today - which happen to be 20 minutes long - to find that piece of info. Sorry."
+These docs describe how to use the [River Clubs](https://river-clubs.vercel.app) API. 
 
-**The Solution** 
+## Authorization
 
-A directory containing all of River's Clubs' information.
+Currently no authorization is required.
 
-The River Clubs website will store meeting times, meeting places, club descriptions, the google classroom and remind codes, and the leadership team. 
+## Requests
 
-Now students can browse through clubs to join and find information regarding clubs they are already in. We no longer have to waste 20 minutes watching a video for 10 seconds of information. 
+When posting a request to our clubs endpoint, format the json data like this: 
+
+```javascript
+{
+    "name": "test_club",
+    "description": "test club description",
+    "leadership":"enter leadership names here separated by commas",
+    "topic":"tech",
+    "time_of_day":"12",
+    "day_of_week":"monday",
+    "date_created":"now"
+}
+```
+
+## Status Codes
+
+River Clubs returns the following status codes in its API:
+
+| Status Code | Description |
+| :--- | :--- |
+| 200 | `OK` |
+| 201 | `CREATED` |
+| 400 | `BAD REQUEST` |
+| 404 | `NOT FOUND` |
+| 500 | `INTERNAL SERVER ERROR` |
 
