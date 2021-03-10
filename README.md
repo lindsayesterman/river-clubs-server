@@ -18,8 +18,10 @@ When posting a request to our clubs endpoint, format the json data like this:
     "description": "test club description",
     "leadership":"enter leadership names here separated by commas",
     "topic":"tech",
-    "time_of_day":"12",
-    "day_of_week":"monday",
+    "time_of_day":"12", //this is from a list of times
+    "day_of_week":"monday", //this is from a list of weekdays
+    "google_classroom_code": "8htg6f",
+    "remind_code": "7hd218",
     "date_created":"now"
 }
 ```
