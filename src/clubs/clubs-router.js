@@ -16,6 +16,7 @@ const serializeClub = (club) => ({
   time_of_day: xss(club.time_of_day),
   google_classroom_code: xss(club.google_classroom_code),
   remind_code: xss(club.remind_code),
+  school: xss(club.school),
   date_created: club.date_created,
 });
 
@@ -40,8 +41,9 @@ clubsRouter
       date_created,
       google_classroom_code,
       remind_code,
+      school,
     } = req.body;
-    const newClub = { name, description };
+    const newClub = { name, description, school };
 
     for (const [key, value] of Object.entries(newClub)) {
       if (value == null) {
@@ -58,6 +60,7 @@ clubsRouter
     newClub.date_created = date_created;
     newClub.google_classroom_code = google_classroom_code;
     newClub.remind_code = remind_code;
+    newClub.school = school;
 
     ClubsService.insertClub(req.app.get("db"), newClub)
       .then((club) => {
@@ -108,8 +111,9 @@ clubsRouter
       date_created,
       google_classroom_code,
       remind_code,
+      school,
     } = req.body;
-    const clubToUpdate = { name, description };
+    const clubToUpdate = { name, description, school };
 
     const numberOfValues = Object.values(clubToUpdate).filter(Boolean).length;
     if (numberOfValues === 0)
@@ -126,6 +130,7 @@ clubsRouter
     clubToUpdate.date_created = date_created;
     clubToUpdate.google_classroom_code = google_classroom_code;
     clubToUpdate.remind_code = remind_code;
+    clubToUpdate.school = school;
 
     ClubsService.updateClub(req.app.get("db"), req.params.club_id, clubToUpdate)
       .then((numRowsAffected) => {
